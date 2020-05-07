@@ -8,13 +8,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        /*appBar: AppBar(
+        appBar: AppBar(
           title: Center(
             child: Text(
               'Containers',
             ),
           ),
-        ),*/
+        ),
         body: SafeArea(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
