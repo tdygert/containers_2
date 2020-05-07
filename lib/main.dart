@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -7,25 +8,41 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        appBar: AppBar(
+        /*appBar: AppBar(
           title: Center(
             child: Text(
               'Containers',
             ),
           ),
-        ),
+        ),*/
         body: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            // mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               Container(
                 height: 100,
                 width: 100,
-                color: Colors.white,
+                color: Colors.red,
                 child: Text(
                   'Container 1',
                 ),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.yellow,
+                  ),
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.green,
+                  ),
+                ],
               ),
               Container(
                 height: 100,
@@ -33,14 +50,6 @@ class MyApp extends StatelessWidget {
                 color: Colors.blue,
                 child: Text(
                   'Container 2',
-                ),
-              ),
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.red,
-                child: Text(
-                  'Container 3',
                 ),
               ),
             ],
